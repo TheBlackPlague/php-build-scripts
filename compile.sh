@@ -12,6 +12,7 @@ LIBPNG_VERSION="1.6.37"
 LIBJPEG_VERSION="9d"
 OPENSSL_VERSION="1.1.1g"
 LIBZIP_VERSION="1.6.1"
+ZSTD_VERSION="0.9.0"
 
 EXT_PTHREADS_VERSION="0e2d93d166afafa100db39c69f8a919fa1b1134d"
 EXT_YAML_VERSION="2.1.0"
@@ -865,6 +866,7 @@ $HAVE_MYSQLI \
 --enable-zip \
 --enable-ftp \
 --enable-opcache=$HAVE_OPCACHE \
+--enable_zstd \
 --enable-igbinary \
 --enable-ds \
 --with-crypto \
