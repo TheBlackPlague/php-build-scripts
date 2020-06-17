@@ -12,7 +12,6 @@ LIBPNG_VERSION="1.6.37"
 LIBJPEG_VERSION="9d"
 OPENSSL_VERSION="1.1.1g"
 LIBZIP_VERSION="1.6.1"
-ZSTD_VERSION="0.9.0"
 
 EXT_PTHREADS_VERSION="0e2d93d166afafa100db39c69f8a919fa1b1134d"
 EXT_YAML_VERSION="2.1.0"
@@ -23,6 +22,7 @@ EXT_IGBINARY_VERSION="3.1.2"
 EXT_DS_VERSION="2ddef84d3e9391c37599cb716592184315e23921"
 EXT_CRYPTO_VERSION="5f26ac91b0ba96742cc6284cd00f8db69c3788b2"
 EXT_RECURSIONGUARD_VERSION="d6ed5da49178762ed81dc0184cd34ff4d3254720"
+EXT_ZSTD_VERSION="0.9.0"
 
 function write_out {
 	echo "[$1] $2"
@@ -718,6 +718,8 @@ get_github_extension "igbinary" "$EXT_IGBINARY_VERSION" "igbinary" "igbinary"
 get_github_extension "ds" "$EXT_DS_VERSION" "php-ds" "ext-ds"
 
 get_github_extension "recursionguard" "$EXT_RECURSIONGUARD_VERSION" "pmmp" "ext-recursionguard"
+
+get_pecl_extension "zstd" "$EXT_ZSTD_VERSION"
 
 echo -n "  crypto: downloading $EXT_CRYPTO_VERSION..."
 git clone https://github.com/bukka/php-crypto.git "$DIR/install_data/php/ext/crypto" >> "$DIR/install.log" 2>&1
