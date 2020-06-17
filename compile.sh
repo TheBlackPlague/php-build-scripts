@@ -838,6 +838,7 @@ $HAS_POCKETMINE_CHUNKUTILS \
 --enable-mbstring \
 --enable-calendar \
 --enable-pthreads \
+--enable-zstd \
 --disable-fileinfo \
 --with-libxml-dir="$DIR/bin/php7" \
 --enable-xml \
